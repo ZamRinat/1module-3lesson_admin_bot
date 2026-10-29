@@ -38,7 +38,7 @@ def ban_user(message):
 
 @bot.message_handler(func=lambda message: True)
 def ban_for_links(message):
-    if message.text and "https://" in message.text:
+    if "https://" in message.text:
         chat_id = message.chat.id
         user_id = message.from_user.id
 
